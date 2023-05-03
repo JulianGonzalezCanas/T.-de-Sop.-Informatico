@@ -1,4 +1,5 @@
 const button = document.getElementsByClassName("btn")[0];
+var contador = 1;
 setInterval(pasarImagen, 3000);
 function validardatos(event){
     event.preventDefault();
@@ -56,8 +57,13 @@ function pasarImagen(){
 
     console.log("hola");
     
-    document.getElementById("foto" + id).style="display: none";
-    document.getElementById("foto" + id).style="display: block";
+    $("#foto" + contador).style="display: none";
+    contador++;
+     if(contador > 3){
+        contador = 1;
+     }
+    $("#foto" + contador).style="display: block";
 }
+    
 
  
